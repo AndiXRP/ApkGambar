@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Aplikasi Menggambar v2.0</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/brython@3.10.5/brython.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/brython@3.10.5/brython_stdlib.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="brython()">
+
+    <div class="app-container">
+        <h1>Aplikasi Menggambar</h1>
+
+        <div id="controls-container">
+            <fieldset>
+                <legend>Alat Menggambar</legend>
+                <label>Mode: 
+                    <select id="mode">
+                        <option value="dot">Titik</option>
+                        <option value="line">Garis</option>
+                        <option value="rect">Persegi</option>
+                        <option value="circle">Lingkaran</option>
+                        <option value="ellipse">Elips</option>
+                    </select>
+                </label>
+                <label>Warna: <input type="color" id="color" value="#000000"></label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Tindakan</legend>
+                <button id="undo-btn">Undo</button>
+                <button id="redo-btn">Redo</button>
+            </fieldset>
+        </div>
+
+        <canvas id="canvas" width="800" height="600"></canvas>
+    </div>
+
+    <script type="text/python" src="main.py"></script>
+</body>
+</html>
